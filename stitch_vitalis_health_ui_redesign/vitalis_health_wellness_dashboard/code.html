@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#5516be", "tertiary-fixed": "#e9ddff", "primary-fixed-dim": "#4ae176", "on-primary-fixed-variant": "#005321", "outline-variant": "#3d4a3d", "outline": "#869585", "inverse-primary": "#006e2f", "inverse-surface": "#dee2ed", "surface-container": "#1b2027", "secondary-container": "#03b5d3", "primary": "#4be277", "on-tertiary-fixed": "#23005c", "surface": "#0f141b", "on-secondary-container": "#00424e", "tertiary": "#d1bdff", "on-secondary-fixed": "#001f26", "on-error": "#690005", "on-tertiary": "#3c0091", "error": "#ffb4ab", "primary-fixed": "#6bff8f", "on-primary-fixed": "#002109", "background": "#0f141b", "inverse-on-surface": "#2c3139", "secondary-fixed": "#acedff", "tertiary-container": "#b89cff", "on-error-container": "#ffdad6", "surface-container-high": "#252a32", "on-primary-container": "#004b1e", "surface-container-lowest": "#090e16", "primary-container": "#22c55e", "surface-tint": "#4ae176", "tertiary-fixed-dim": "#d0bcff", "secondary": "#4cd7f6", "on-tertiary-container": "#4e02b8", "surface-variant": "#30353d", "on-secondary": "#003640", "on-surface-variant": "#bccbb9", "on-secondary-fixed-variant": "#004e5c", "error-container": "#93000a", "surface-dim": "#0f141b", "on-background": "#dee2ed", "surface-bright": "#343942", "surface-container-low": "#171c23", "on-primary": "#003915", "surface-container-highest": "#30353d", "secondary-fixed-dim": "#4cd7f6", "on-surface": "#dee2ed" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "1.5rem", "space-2xl": "3rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-lg": "2rem" }, "fontFamily": { "headline-md": ["Inter"], "display-hero-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "metric-md": ["Inter"], "body-md": ["Inter"], "mono-metric": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "metric-xl": ["Inter"], "body-lg": ["Inter"], "display-hero": ["Inter"], "headline-lg": ["Inter"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "metric-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-metric": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }], "metric-xl": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between p-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Vitalis Brand Wordmark & Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XMKbWBim3MNSiDwt3WKkztxiDSNVGj6URUQS5Zmf6ufrzHI_7Li7hUI5aLQBUR2K4UuZRKEMcPeserD2ZVeEsDm-3Qa3KJ8Mn_oDmRciyKIpYwuElFnINWlf1HVjk6iUkeiP0TMXkq5bRQyZu-nCmdzaxbr-HZZuj_FKQWQEYaCNKcgQw5LZEB2rphSO064_6pnsxay4DV4Tzb5L1MIl_DCqqaRHG1RMJ9PoP9Ge9vig"/><div class="flex flex-col"><span class="text-label-md font-label-md tracking-wider text-on-surface uppercase font-bold">Vitalis</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Your health. One system.</span></div></div><div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-low"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><div class="flex flex-col"><span class="text-label-sm font-label-sm text-on-surface">Telemetry Active</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Synchronized Biometrics</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all bg-surface-container-high text-on-surface font-semibold shadow-sm" data-path="dashboard" href="../vitalis_health_wellness_dashboard/code.html"><span class="material-symbols-outlined text-primary text-[20px]">grid_view</span><span class="text-body-md font-body-md">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fitness-and-training" href="../vitalis_fitness_training/code.html"><span class="material-symbols-outlined text-primary-fixed text-[20px]">fitness_center</span><span class="text-body-md font-body-md">Fitness & Training</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="nutrition-and-macros" href="../vitalis_nutrition_macros/code.html"><span class="material-symbols-outlined text-secondary-container text-[20px]">restaurant</span><span class="text-body-md font-body-md">Nutrition & Macros</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="habits" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-primary text-[20px]">task_alt</span><span class="text-body-md font-body-md">Habits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="vitals-and-telemetry" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-tertiary text-[20px]">monitor_heart</span><span class="text-body-md font-body-md">Vitals & Telemetry</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="vitalis-ai-advisor" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-secondary text-[20px]">neurology</span><span class="text-body-md font-body-md">Vitalis AI Advisor</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="profile-and-settings" href="../vitalis_health_wellness_dashboard/code.html"><span class="material-symbols-outlined text-outline text-[20px]">settings</span><span class="text-body-md font-body-md">Profile & Settings</span></a></nav></div><div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-low"><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSo9KSkzDXyHL2Es59vGbNeQ_iBdSJcfJL1beWuBU-GI3xpsOYe3sheqIJzPmfEPbzZMd8kLqjB3n8T5PVTxSmfSDdEetCYrvfufqHKWsmW_A1jiv-rBAYd_smU-iKKz-Pl7TmeW8tEw3AGTitx3X1mnaqK8PK269CfCVCBwqesurPNyPTUn8H1FnLrvFX4Tut5KygzI2uRZl7WfuBdWMBCfEjCIEHGTD_4TPyKIe"/><div class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-low"></div></div><div class="flex flex-col min-w-0"><span class="text-label-md font-label-md text-on-surface truncate">Harshita</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Pro Health Tier</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full text-on-surface"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="text-label-md font-label-md">Today, Oct 24</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Continuous Biometrics</span></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="relative w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSo9KSkzDXyHL2Es59vGbNeQ_iBdSJcfJL1beWuBU-GI3xpsOYe3sheqIJzPmfEPbzZMd8kLqjB3n8T5PVTxSmfSDdEetCYrvfufqHKWsmW_A1jiv-rBAYd_smU-iKKz-Pl7TmeW8tEw3AGTitx3X1mnaqK8PK269CfCVCBwqesurPNyPTUn8H1FnLrvFX4Tut5KygzI2uRZl7WfuBdWMBCfEjCIEHGTD_4TPyKIe"/></div></div></header><main class="w-full pt-16 px-space-xl bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-2xl gap-space-xl">
+<!-- Top Greeting & Biometric Live Status Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-primary">Circadian Phase · Peak Evening Recovery</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">CORE_ID: VTL-9942</span>
+</div>
+<h1 id="dashboard-greeting" class="text-headline-lg font-headline-lg text-on-surface tracking-tight">Good evening, Harshita 👋</h1>
+<p class="text-body-md font-body-md text-on-surface-variant">Here’s your health snapshot for today · Tuesday, Oct 24</p>
+</div>
+<!-- Live Telemetry Status Pill -->
+<div class="flex items-center gap-space-md self-start md:self-auto bg-surface-container-low px-space-md py-space-sm rounded-full shadow-sm">
+<div class="relative flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping absolute opacity-75"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary relative"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface font-semibold">Live Biometrics Active</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">Stream latency 42ms · 99.8% Sync</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px] ml-space-xs">sensors</span>
+</div>
+</div>
+<!-- Medical / Guardrail Status Banner -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-start md:items-center justify-between gap-space-md flex-col md:flex-row">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm uppercase tracking-wider font-semibold text-secondary">Safety Guardrail Active</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-label-sm font-label-sm text-on-surface font-medium">Knee Meniscus Recovery Protocol</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">
+            Low-impact cardio and knee-stabilizing warm-ups prioritized. Impact loads restricted to < 2.5G.
+          </p>
+</div>
+</div>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm transition-all flex items-center gap-space-xs flex-shrink-0">
+<span>Modify Guardrails</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Hero Bento Grid: Daily Wellness Score & AI Intelligence Advisor -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- DAILY WELLNESS SCORE CARD (8 Cols) -->
+<div class="lg:col-span-8 relative overflow-hidden bg-surface-container-low rounded-xl p-space-xl shadow-lg flex flex-col justify-between gap-space-xl">
+<!-- Glow ambient backdrop -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-64 h-64 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<!-- Header row inside score card -->
+<div class="flex items-center justify-between z-10">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant">Composite Biomarker Score</span>
+<h2 class="text-headline-sm font-headline-sm text-on-surface tracking-tight">Daily Wellness Matrix</h2>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="text-label-sm font-label-sm font-semibold">Great Health Day (+4 pts vs yesterday)</span>
+</div>
+</div>
+<!-- Core Score Visualizer & Main Metrics Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl items-center z-10">
+<!-- SVG Gauge Radial Chart (5 cols) -->
+<div class="md:col-span-5 flex flex-col items-center justify-center relative">
+<div class="relative w-52 h-52 flex items-center justify-center">
+<!-- Radial SVG Gauge -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160">
+<defs>
+<lineargradient id="scoreEmeraldGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4be277"></stop>
+<stop offset="50%" stop-color="#22c55e"></stop>
+<stop offset="100%" stop-color="#4cd7f6"></stop>
+</lineargradient>
+<filter height="140%" id="emeraldGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#22c55e" flood-opacity="0.45" stddeviation="6"></fedropshadow>
+</filter>
+</defs>
+<!-- Background Ring Track -->
+<circle class="text-surface-container-high" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-width="12"></circle>
+<!-- Active Progress Stroke (Score 88/100 -> Circumference = 2 * PI * 68 = 427.25. Dash offset = 427.25 * (1 - 0.88) = 51.27) -->
+<circle class="transition-all duration-1000 ease-out" cx="80" cy="80" fill="none" filter="url(#emeraldGlow)" r="68" stroke="url(#scoreEmeraldGradient)" stroke-dasharray="427.25" stroke-dashoffset="51.27" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<!-- Center Typography Score Display -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-metric-xl font-metric-xl text-on-surface tracking-tighter">88</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-mono">/ 100 PTS</span>
+<span class="mt-1 px-space-sm py-0.5 rounded text-[10px] uppercase font-bold tracking-widest bg-primary text-on-primary">Optimal</span>
+</div>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-space-sm text-center">Biomarker readiness in upper 94th percentile</span>
+</div>
+<!-- 5 Category Supporting Inline Metrics (7 cols) -->
+<div class="md:col-span-7 flex flex-col gap-space-md">
+<!-- Steps metric row -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">directions_walk</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Daily Steps</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-metric font-mono-metric text-on-surface">84%</span>
+<span class="text-label-sm font-label-sm text-primary flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>+3.2%
+                </span>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+<!-- Sleep metric row -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">bedtime</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Restorative Sleep</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-metric font-mono-metric text-on-surface">96%</span>
+<span class="text-label-sm font-label-sm text-primary flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>+6.1%
+                </span>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Workout metric row -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">fitness_center</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Movement & Intensity</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-metric font-mono-metric text-on-surface">100%</span>
+<span class="text-label-sm font-label-sm text-primary flex items-center">
+<span class="material-symbols-outlined text-[14px]">check</span>Done
+                </span>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-fixed-dim rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Nutrition metric row -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">restaurant</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Macro Compliance</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-metric font-mono-metric text-on-surface">78%</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center font-mono">
+                  -220 kcal
+                </span>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Hydration metric row -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">water_drop</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Cellular Hydration</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-mono-metric font-mono-metric text-on-surface">72%</span>
+<span class="text-label-sm font-label-sm text-secondary-fixed flex items-center font-mono">
+                  1.8L / 2.5L
+                </span>
+</div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary-fixed rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick footer inside Score card -->
+<div class="flex items-center justify-between pt-space-sm z-10 text-on-surface-variant text-label-sm font-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Calibrated against 14-day baseline</span>
+</div>
+<button class="hover:text-on-surface transition-colors flex items-center gap-1 font-medium">
+          Detailed Telemetry Report <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- AI Personalized Intelligence Card (4 Cols) -->
+<div class="lg:col-span-4 relative overflow-hidden bg-surface-container-low rounded-xl p-space-xl shadow-lg flex flex-col justify-between gap-space-lg">
+<div class="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-tertiary/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-tertiary font-semibold">Vitalis Intelligence</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Personalized Insight</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px] animate-pulse">auto_awesome</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">battery_charging_full</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase">Readiness Prime · 9.4 / 10</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+            Based on your <span class="text-tertiary font-semibold">7h 42m recovery</span> and lower resting heart rate (<span class="text-primary font-semibold">54 bpm</span>), your readiness score is prime for high-intensity training today.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0 mt-0.5">water_drop</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Don’t forget <span class="text-on-surface font-semibold">700ml water</span> in the next 90 mins to bridge the current hydration gap before evening cool-down.
+            </p>
+</div>
+</div>
+<!-- Biometric Context Pill Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Resting HR Dip</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">52 <span class="text-body-sm font-body-sm text-on-surface-variant">bpm</span></span>
+<span class="text-[11px] text-primary flex items-center mt-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Optimal nadir
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">HRV Balance</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">68 <span class="text-body-sm font-body-sm text-on-surface-variant">ms</span></span>
+<span class="text-[11px] text-secondary flex items-center mt-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +11% 7d avg
+            </span>
+</div>
+</div>
+</div>
+<!-- Quick AI Action -->
+<div class="flex flex-col gap-space-xs z-10 pt-space-sm">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-space-sm shadow-md">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>Ask Vitalis AI Advisor</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Horizontally Scrollable QUICK ACTIONS Cockpit Bar -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">bolt</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface font-semibold">Immediate Intake & Telemetry Actions</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">1-TAP STREAM</span>
+</div>
+<div class="flex items-center gap-space-md overflow-x-auto pb-space-xs -mx-space-xl px-space-xl scrollbar-none">
+<!-- Water Quick Action -->
+<button class="group flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex-shrink-0 active:scale-95 shadow-[0_4px_16px_rgba(6,182,212,0.08)] hover:shadow-[0_8px_24px_rgba(6,182,212,0.2)]" id="btnQuickWater">
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-secondary/20 flex items-center justify-center text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">local_drink</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-body-md font-body-md font-semibold text-on-surface">+250ml Water</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Hydration Tap</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors text-[18px] ml-space-xs">add</span>
+</button>
+<!-- Workout Quick Action -->
+<button class="group flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex-shrink-0 active:scale-95 shadow-[0_4px_16px_rgba(34,197,94,0.08)] hover:shadow-[0_8px_24px_rgba(34,197,94,0.2)]">
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">exercise</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-body-md font-body-md font-semibold text-on-surface">+ Log Workout</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Strength & Cardio</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-[18px] ml-space-xs">add</span>
+</button>
+<!-- Meal Quick Action -->
+<button class="group flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex-shrink-0 active:scale-95 shadow-[0_4px_16px_rgba(249,115,22,0.08)] hover:shadow-[0_8px_24px_rgba(249,115,22,0.2)]">
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-primary-container/20 flex items-center justify-center text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-body-md font-body-md font-semibold text-on-surface">+ Log Meal</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Macros & Calories</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary-container transition-colors text-[18px] ml-space-xs">add</span>
+</button>
+<!-- Sleep Log Quick Action -->
+<button class="group flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex-shrink-0 active:scale-95 shadow-[0_4px_16px_rgba(99,102,241,0.08)] hover:shadow-[0_8px_24px_rgba(99,102,241,0.2)]">
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-tertiary/20 flex items-center justify-center text-tertiary transition-colors">
+<span class="material-symbols-outlined text-[20px]">night_shelter</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-body-md font-body-md font-semibold text-on-surface">+ Sleep Log</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Stages & Quality</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary transition-colors text-[18px] ml-space-xs">add</span>
+</button>
+<!-- Record Vitals Quick Action -->
+<button class="group flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all flex-shrink-0 active:scale-95 shadow-[0_4px_16px_rgba(139,92,246,0.08)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.2)]">
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-tertiary-container/20 flex items-center justify-center text-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">vital_signs</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-body-md font-body-md font-semibold text-on-surface">+ Record Vitals</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">BP, Glucose & SpO2</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary-container transition-colors text-[18px] ml-space-xs">add</span>
+</button>
+</div>
+</div>
+<!-- TODAY'S HEALTH SNAPSHOT (4 Responsive Cards) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Real-Time Sensor Telemetry</span>
+<h3 class="text-headline-md font-headline-md text-on-surface tracking-tight">Today’s Health Snapshot</h3>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant text-label-sm font-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Auto-synced via BLE Ring + Smart Scale</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- 1. Steps Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:-translate-y-0.5 transition-all">
+<div class="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-primary/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">footprint</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Activity</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono text-primary bg-primary/10 px-space-xs py-0.5 rounded">84%</span>
+</div>
+<!-- Circular Metric Graphic -->
+<div class="flex items-center justify-between my-space-xs">
+<div class="flex flex-col">
+<span class="text-headline-lg font-headline-lg text-on-surface font-semibold tracking-tight">8,420</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">/ 10,000 steps</span>
+</div>
+<!-- Mini Progress Ring SVG -->
+<div class="relative w-16 h-16 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-high" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4.5"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="#22c55e" stroke-dasharray="125.6" stroke-dashoffset="20.1" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<span class="material-symbols-outlined text-primary text-[18px] absolute">directions_run</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm mt-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Active Burn</span>
+<span class="text-body-md font-body-md font-semibold text-on-surface">480 kcal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Distance</span>
+<span class="text-body-md font-body-md font-semibold text-on-surface">6.2 km</span>
+</div>
+</div>
+</div>
+<!-- 2. Hydration Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:-translate-y-0.5 transition-all">
+<div class="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-secondary/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">water_drop</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Hydration</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono text-secondary bg-secondary/10 px-space-xs py-0.5 rounded">72%</span>
+</div>
+<div class="flex flex-col my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="text-headline-lg font-headline-lg text-on-surface font-semibold tracking-tight" id="hydrationCurrentVal">1.8</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">L</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">/ 2.5L Target</span>
+</div>
+<!-- Wave Level Water Visualizer -->
+<div class="relative w-full h-10 mt-space-sm rounded-lg bg-surface-container overflow-hidden flex items-end">
+<!-- Animated SVG wave bar -->
+<div class="w-full bg-gradient-to-t from-secondary/40 to-secondary transition-all duration-500 rounded-b-lg relative" id="hydrationWaveBar" style="height: 72%;">
+<svg class="absolute -top-2 left-0 w-[200%] h-3 text-secondary fill-current opacity-80" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0 10 Q 25 20, 50 10 T 100 10 T 150 10 T 200 10 V 20 H 0 Z"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-1 py-1.5 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-secondary text-label-sm font-label-sm font-semibold transition-all text-center" id="tapAdd250">
+            +250ml
+          </button>
+<button class="flex-1 py-1.5 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-secondary text-label-sm font-label-sm font-semibold transition-all text-center" id="tapAdd500">
+            +500ml
+          </button>
+</div>
+</div>
+<!-- 3. Sleep Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:-translate-y-0.5 transition-all">
+<div class="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-tertiary/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">nights_stay</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Sleep Architecture</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono text-tertiary bg-tertiary/10 px-space-xs py-0.5 rounded">92 Score</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="text-headline-lg font-headline-lg text-on-surface font-semibold tracking-tight">7h 42m</span>
+<span class="text-label-sm font-label-sm text-tertiary font-mono">+38m vs avg</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Deep & REM Recovery</span>
+<span class="text-tertiary font-medium">92%</span>
+</div>
+<!-- Multi-stage Sleep Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-high flex overflow-hidden">
+<div class="bg-tertiary-fixed h-full" style="width: 28%;" title="Deep Sleep"></div>
+<div class="bg-tertiary h-full" style="width: 38%;" title="REM Sleep"></div>
+<div class="bg-surface-container-highest h-full" style="width: 34%;" title="Light Sleep"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Nadir HR</span>
+<span class="text-body-md font-body-md font-semibold text-on-surface">52 bpm</span>
+</div>
+<div class="flex items-col text-right flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Rest Efficiency</span>
+<span class="text-body-md font-body-md font-semibold text-primary">96%</span>
+</div>
+</div>
+</div>
+<!-- 4. Calories & Energy Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:-translate-y-0.5 transition-all">
+<div class="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-primary-container/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">local_fire_department</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Energy Intake</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">460 kcal left</span>
+</div>
+<div class="flex items-center justify-between my-space-xs">
+<div class="flex flex-col">
+<span class="text-headline-lg font-headline-lg text-on-surface font-semibold tracking-tight">1,640</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">/ 2,100 kcal Target</span>
+</div>
+<!-- Mini Arc SVG for Calorie Burn -->
+<div class="relative w-14 h-14 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<circle class="text-surface-container-high" cx="18" cy="18" fill="none" r="14" stroke="currentColor" stroke-width="3.5"></circle>
+<circle cx="18" cy="18" fill="none" r="14" stroke="#22c55e" stroke-dasharray="87.9" stroke-dashoffset="19.3" stroke-linecap="round" stroke-width="3.5"></circle>
+</svg>
+<span class="text-label-sm font-label-sm font-bold text-on-surface">78%</span>
+</div>
+</div>
+</div>
+<!-- Macros Breakdown Pill Tags -->
+<div class="flex items-center justify-between gap-1 pt-space-xs">
+<div class="flex-1 px-1.5 py-1 rounded bg-surface-container text-center flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-semibold">Protein</span>
+<span class="text-label-sm font-label-sm font-semibold text-primary">118g</span>
+</div>
+<div class="flex-1 px-1.5 py-1 rounded bg-surface-container text-center flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-semibold">Carbs</span>
+<span class="text-label-sm font-label-sm font-semibold text-secondary">175g</span>
+</div>
+<div class="flex-1 px-1.5 py-1 rounded bg-surface-container text-center flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-semibold">Fats</span>
+<span class="text-label-sm font-label-sm font-semibold text-tertiary">48g</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Split Section: Recent Activity Timeline & Upcoming Biological Schedule -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Recent Activity Feed (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-xl shadow-md flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface tracking-tight">Today’s Event Timeline</h3>
+</div>
+<button class="text-label-sm font-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5">
+          Full Log <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<!-- Feed Items -->
+<div class="flex flex-col gap-space-md">
+<!-- Event 1: Workout -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">fitness_center</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-body-md font-body-md font-semibold text-on-surface truncate">Low-Impact Posterior Chain Strength</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold bg-primary/20 text-primary">Guardrail Safe</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">52 mins · Avg HR 134 bpm · 390 kcal burned</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono whitespace-nowrap ml-space-sm">08:15 AM</span>
+</div>
+<!-- Event 2: Nutrition -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-body-md font-body-md font-semibold text-on-surface truncate">High-Protein Post-Workout Fuel</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">Greek yogurt bowl, whey isolate, berries · 580 kcal</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono whitespace-nowrap ml-space-sm">09:40 AM</span>
+</div>
+<!-- Event 3: Vitals Telemetry Ping -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">ecg_heart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-body-md font-body-md font-semibold text-on-surface truncate">Spontaneous ECG & Stress Check</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">Sinus rhythm verified · Stress load: Low (18/100)</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono whitespace-nowrap ml-space-sm">02:20 PM</span>
+</div>
+<!-- Event 4: Hydration Intake -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/10 text-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">water_full</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-body-md font-body-md font-semibold text-on-surface truncate">Electrolyte Infused Water Intake</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">+500 ml registered via Smart Bottle</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono whitespace-nowrap ml-space-sm">04:45 PM</span>
+</div>
+</div>
+</div>
+<!-- Upcoming Biological Protocol Reminders (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-xl shadow-md flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface tracking-tight">Evening Biological Reminders</h3>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-mono font-medium">3 Pending</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Reminder Item 1 -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-md border-l-2 border-primary">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="text-body-md font-body-md font-semibold text-on-surface">Knee Mobility & Decompression</span>
+<span class="text-label-sm font-label-sm font-mono text-primary">08:30 PM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Prescribed 10-min hamstring & IT band rolling before bed.
+              </p>
+</div>
+</div>
+<!-- Reminder Item 2 -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-md border-l-2 border-secondary">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_drink</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="text-body-md font-body-md font-semibold text-on-surface">Final Hydration Window</span>
+<span class="text-label-sm font-label-sm font-mono text-secondary">09:15 PM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Consume 350ml magnesium water; taper fluids 90 mins prior to sleep.
+              </p>
+</div>
+</div>
+<!-- Reminder Item 3 -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-md border-l-2 border-tertiary">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">light_mode</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="text-body-md font-body-md font-semibold text-on-surface">Circadian Dark Adaptation</span>
+<span class="text-label-sm font-label-sm font-mono text-tertiary">10:00 PM</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Ambient lights dimming to 2200K amber for melatonin surge.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Telemetry Health Status Footer -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm font-medium text-on-surface">Sensors Online</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Whoop 4.0 · Withings Body+ · Dexcom G7</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase bg-primary/20 text-primary">All nominal</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive micro-interaction for rapid hydration logs & real backend sync
+  (function initDashboardInteractions() {
+    let hydration = 1.75;
+    const target = 2.5;
+    const currentValEl = document.getElementById('hydrationCurrentVal');
+    const waveBarEl = document.getElementById('hydrationWaveBar');
+
+    function updateHydration(amount) {
+      hydration = Math.min(target, +(hydration + amount).toFixed(2));
+      if (currentValEl) currentValEl.innerText = hydration.toFixed(1);
+      if (waveBarEl) {
+        const pct = Math.min(100, Math.round((hydration / target) * 100));
+        waveBarEl.style.height = pct + '%';
+      }
+      fetch('http://localhost:5000/api/habits/water', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amountMl: Math.round(amount * 1000) })
+      }).catch(err => console.warn('Water backend sync error:', err));
+    }
+
+    const tap250 = document.getElementById('tapAdd250');
+    const tap500 = document.getElementById('tapAdd500');
+    const quickWater = document.getElementById('btnQuickWater');
+
+    if (tap250) tap250.addEventListener('click', () => updateHydration(0.25));
+    if (tap500) tap500.addEventListener('click', () => updateHydration(0.50));
+    if (quickWater) quickWater.addEventListener('click', () => updateHydration(0.25));
+
+    // Load live dashboard metrics from backend
+    fetch('http://localhost:5000/api/dashboard')
+      .then(res => res.json())
+      .then(result => {
+        if (result.success && result.data) {
+          const d = result.data;
+          if (d.user && d.user.name) {
+            const greeting = document.getElementById('dashboard-greeting');
+            if (greeting) greeting.textContent = `Good evening, ${d.user.name} 👋`;
+          }
+          if (d.today && d.today.water) {
+            hydration = +(d.today.water.currentMl / 1000).toFixed(2);
+            if (currentValEl) currentValEl.innerText = hydration.toFixed(1);
+            if (waveBarEl) waveBarEl.style.height = Math.min(100, Math.round(d.today.water.progress * 100)) + '%';
+          }
+        }
+      })
+      .catch(err => console.warn('Dashboard live telemetry:', err));
+  })();
+</script></main></div></body></html>

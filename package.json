@@ -1,0 +1,23 @@
+{
+  "name": "vitalis-health-tracker-suite",
+  "version": "1.0.0",
+  "description": "Vitalis Health Tracker - Full Stack Health & Wellness System for Harshita",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "backend": "cd backend && npm start",
+    "frontend": "cd vitalis-health-tracker && npm run web",
+    "build:web": "cd vitalis-health-tracker && npx expo export --platform web",
+    "test": "cd backend && node test_all_endpoints.js",
+    "seed": "cd backend && node database/seed.js"
+  },
+  "keywords": [
+    "vitalis",
+    "health-tracker",
+    "react-native",
+    "express",
+    "sqlite"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}

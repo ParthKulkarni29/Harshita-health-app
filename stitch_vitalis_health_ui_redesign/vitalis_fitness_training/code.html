@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#5516be", "tertiary-fixed": "#e9ddff", "primary-fixed-dim": "#4ae176", "on-primary-fixed-variant": "#005321", "outline-variant": "#3d4a3d", "outline": "#869585", "inverse-primary": "#006e2f", "inverse-surface": "#dee2ed", "surface-container": "#1b2027", "secondary-container": "#03b5d3", "primary": "#4be277", "on-tertiary-fixed": "#23005c", "surface": "#0f141b", "on-secondary-container": "#00424e", "tertiary": "#d1bdff", "on-secondary-fixed": "#001f26", "on-error": "#690005", "on-tertiary": "#3c0091", "error": "#ffb4ab", "primary-fixed": "#6bff8f", "on-primary-fixed": "#002109", "background": "#0f141b", "inverse-on-surface": "#2c3139", "secondary-fixed": "#acedff", "tertiary-container": "#b89cff", "on-error-container": "#ffdad6", "surface-container-high": "#252a32", "on-primary-container": "#004b1e", "surface-container-lowest": "#090e16", "primary-container": "#22c55e", "surface-tint": "#4ae176", "tertiary-fixed-dim": "#d0bcff", "secondary": "#4cd7f6", "on-tertiary-container": "#4e02b8", "surface-variant": "#30353d", "on-secondary": "#003640", "on-surface-variant": "#bccbb9", "on-secondary-fixed-variant": "#004e5c", "error-container": "#93000a", "surface-dim": "#0f141b", "on-background": "#dee2ed", "surface-bright": "#343942", "surface-container-low": "#171c23", "on-primary": "#003915", "surface-container-highest": "#30353d", "secondary-fixed-dim": "#4cd7f6", "on-surface": "#dee2ed" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin-tablet": "1.5rem", "space-2xl": "3rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-lg": "2rem" }, "fontFamily": { "headline-md": ["Inter"], "display-hero-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "metric-md": ["Inter"], "body-md": ["Inter"], "mono-metric": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "metric-xl": ["Inter"], "body-lg": ["Inter"], "display-hero": ["Inter"], "headline-lg": ["Inter"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "metric-md": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-metric": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }], "metric-xl": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between p-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Vitalis Brand Wordmark & Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XMKbWBim3MNSiDwt3WKkztxiDSNVGj6URUQS5Zmf6ufrzHI_7Li7hUI5aLQBUR2K4UuZRKEMcPeserD2ZVeEsDm-3Qa3KJ8Mn_oDmRciyKIpYwuElFnINWlf1HVjk6iUkeiP0TMXkq5bRQyZu-nCmdzaxbr-HZZuj_FKQWQEYaCNKcgQw5LZEB2rphSO064_6pnsxay4DV4Tzb5L1MIl_DCqqaRHG1RMJ9PoP9Ge9vig"/><div class="flex flex-col"><span class="text-label-md font-label-md tracking-wider text-on-surface uppercase font-bold">Vitalis</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Your health. One system.</span></div></div><div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-low"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><div class="flex flex-col"><span class="text-label-sm font-label-sm text-on-surface">Telemetry Active</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Synchronized Biometrics</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="../vitalis_health_wellness_dashboard/code.html"><span class="material-symbols-outlined text-primary text-[20px]">grid_view</span><span class="text-body-md font-body-md">Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all bg-surface-container-high text-on-surface font-semibold shadow-sm" data-path="fitness-and-training" href="../vitalis_fitness_training/code.html"><span class="material-symbols-outlined text-primary-fixed text-[20px]">fitness_center</span><span class="text-body-md font-body-md">Fitness & Training</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="nutrition-and-macros" href="../vitalis_nutrition_macros/code.html"><span class="material-symbols-outlined text-secondary-container text-[20px]">restaurant</span><span class="text-body-md font-body-md">Nutrition & Macros</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="habits" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-primary text-[20px]">task_alt</span><span class="text-body-md font-body-md">Habits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="vitals-and-telemetry" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-tertiary text-[20px]">monitor_heart</span><span class="text-body-md font-body-md">Vitals & Telemetry</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="vitalis-ai-advisor" href="../vitalis_vitals_habits_ai_advisor/code.html"><span class="material-symbols-outlined text-secondary text-[20px]">neurology</span><span class="text-body-md font-body-md">Vitalis AI Advisor</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="profile-and-settings" href="../vitalis_health_wellness_dashboard/code.html"><span class="material-symbols-outlined text-outline text-[20px]">settings</span><span class="text-body-md font-body-md">Profile & Settings</span></a></nav></div><div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-low"><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSo9KSkzDXyHL2Es59vGbNeQ_iBdSJcfJL1beWuBU-GI3xpsOYe3sheqIJzPmfEPbzZMd8kLqjB3n8T5PVTxSmfSDdEetCYrvfufqHKWsmW_A1jiv-rBAYd_smU-iKKz-Pl7TmeW8tEw3AGTitx3X1mnaqK8PK269CfCVCBwqesurPNyPTUn8H1FnLrvFX4Tut5KygzI2uRZl7WfuBdWMBCfEjCIEHGTD_4TPyKIe"/><div class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-low"></div></div><div class="flex flex-col min-w-0"><span class="text-label-md font-label-md text-on-surface truncate">Harshita</span><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Pro Health Tier</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full text-on-surface"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="text-label-md font-label-md">Today, Oct 24</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Continuous Biometrics</span></div></div><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="relative w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSo9KSkzDXyHL2Es59vGbNeQ_iBdSJcfJL1beWuBU-GI3xpsOYe3sheqIJzPmfEPbzZMd8kLqjB3n8T5PVTxSmfSDdEetCYrvfufqHKWsmW_A1jiv-rBAYd_smU-iKKz-Pl7TmeW8tEw3AGTitx3X1mnaqK8PK269CfCVCBwqesurPNyPTUn8H1FnLrvFX4Tut5KygzI2uRZl7WfuBdWMBCfEjCIEHGTD_4TPyKIe"/></div></div></header><main class="w-full pt-16 px-space-xl bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Dynamic Atmospheric Glow -->
+<div class="relative w-full">
+<div class="absolute -top-12 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-48 right-10 w-80 h-80 rounded-full bg-secondary/5 blur-[100px] pointer-events-none -z-10"></div>
+<!-- Header & Action Ribbon -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-primary font-semibold">Engineered Performance</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">Fitness & Training</h1>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-space-sm">
+<span>Build strength. Build consistency.</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-primary font-medium">Weekly Target: 5/5 Days Completed</span>
+</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="text-mono-metric font-mono-metric text-on-surface">Target Cadence: 100%</span>
+</div>
+<button class="relative group overflow-hidden bg-primary text-on-primary px-space-xl py-space-md rounded-xl font-headline-sm text-headline-sm flex items-center gap-space-sm shadow-[0_4px_24px_rgba(75,226,119,0.35)] hover:shadow-[0_6px_32px_rgba(75,226,119,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer" id="open-log-modal-btn">
+<div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span>Log Workout</span>
+</button>
+</div>
+</div>
+<!-- Safety Guardrail Banner -->
+<div class="relative overflow-hidden mb-space-xl rounded-xl bg-surface-container-low p-space-md flex items-center justify-between shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-x-space-md gap-y-0.5">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-secondary font-bold">Personal Guardrail Active</span>
+<span class="text-body-sm font-body-sm text-on-surface">Patellar tendon caution • Plyometric volume capped for 48h regeneration cycle.</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-space-xs text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>Biometric Synced</span>
+</div>
+</div>
+<!-- Hero Matrix: 7-Day Streak & Telemetry Bento -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-2xl">
+<!-- 7-Day Streak High-Luminescence Card -->
+<div class="xl:col-span-8 relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low p-space-xl shadow-[0_12px_40px_-8px_rgba(34,197,94,0.18)] flex flex-col justify-between">
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-primary/10 blur-[80px] pointer-events-none"></div>
+<div class="absolute top-0 right-0 p-space-xl opacity-10">
+<span class="material-symbols-outlined text-[180px] text-primary">local_fire_department</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-lg pb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-on-primary shadow-[0_0_24px_rgba(75,226,119,0.5)]">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-primary tracking-widest uppercase font-bold">Performance Flow</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">7 DAY STREAK</h2>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest/80 px-space-md py-space-xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-mono-metric font-mono-metric text-on-surface">Physiological Peak State</span>
+</div>
+</div>
+<!-- Metric Cluster -->
+<div class="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-space-md py-space-lg">
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-lowest/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Current Streak</span>
+<span class="text-metric-md font-metric-md text-on-surface mt-space-xs">7 <span class="text-label-md font-label-md text-on-surface-variant">Days</span></span>
+<span class="text-body-sm font-body-sm text-primary flex items-center gap-0.5 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +2 vs prev
+            </span>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-lowest/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Sessions</span>
+<span class="text-metric-md font-metric-md text-on-surface mt-space-xs">5 <span class="text-label-md font-label-md text-on-surface-variant">Units</span></span>
+<span class="text-body-sm font-body-sm text-primary flex items-center gap-0.5 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">done_all</span> 100% Target
+            </span>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-lowest/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Active Time</span>
+<span class="text-metric-md font-metric-md text-on-surface mt-space-xs">215 <span class="text-label-md font-label-md text-on-surface-variant">min</span></span>
+<span class="text-body-sm font-body-sm text-primary flex items-center gap-0.5 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Avg 43m/d
+            </span>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-lowest/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Total Burned</span>
+<span class="text-metric-md font-metric-md text-on-surface mt-space-xs">2,480 <span class="text-label-md font-label-md text-on-surface-variant">kcal</span></span>
+<span class="text-body-sm font-body-sm text-secondary flex items-center gap-0.5 mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">bolt</span> High output
+            </span>
+</div>
+</div>
+<!-- Integrated Dynamic Progress Ring Row -->
+<div class="relative z-10 pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest/40 p-space-md rounded-xl">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 flex items-center justify-center flex-shrink-0">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 64 64">
+<circle class="text-surface-variant" cx="32" cy="32" fill="none" opacity="0.3" r="28" stroke="currentColor" stroke-width="5"></circle>
+<circle class="transition-all duration-1000 ease-out" cx="32" cy="32" fill="none" r="28" stroke="url(#ring-gradient)" stroke-dasharray="175.9" stroke-dashoffset="26.3" stroke-linecap="round" stroke-width="5"></circle>
+<defs>
+<lineargradient id="ring-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4be277"></stop>
+<stop offset="100%" stop-color="#03b5d3"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-mono-metric font-mono-metric font-bold text-on-surface">85%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface font-semibold">Weekly Load Saturation</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Recommended recovery threshold reached safely. Optimal strain window maintained.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-mono-metric font-mono-metric text-primary px-space-sm py-space-xs bg-primary/10 rounded-md">Optimal Strain</span>
+</div>
+</div>
+</div>
+<!-- Weekly Load Visualizer (Mon-Sun Interactive Bars) -->
+<div class="xl:col-span-4 rounded-xl bg-surface-container p-space-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Weekly Intensity Matrix</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Volume Visualizer</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">equalizer</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-space-lg">
+          Click any day indicator to inspect volumetric strain and heart-rate zone allocation.
+        </p>
+<!-- 7-Day Bars Grid -->
+<div class="flex items-end justify-between gap-space-xs h-48 pt-space-md px-space-xs" id="week-bars-container">
+<!-- Mon -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="410 kcal" data-day="Mon" data-time="48 min" data-title="Legs & Core Hypertrophy">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-primary/70 group-hover:bg-primary rounded-md transition-all duration-300" style="height: 65%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">M</span>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="280 kcal" data-day="Tue" data-time="30 min" data-title="Zone 2 Conditioning">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-primary/60 group-hover:bg-primary rounded-md transition-all duration-300" style="height: 42%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">T</span>
+</div>
+<!-- Wed -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="510 kcal" data-day="Wed" data-time="55 min" data-title="HIIT Circuit & Plyos">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-primary/90 group-hover:bg-primary rounded-md transition-all duration-300 shadow-[0_0_12px_rgba(75,226,119,0.3)]" style="height: 82%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">W</span>
+</div>
+<!-- Thu -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="310 kcal" data-day="Thu" data-time="32 min" data-title="Tempo Run Outdoors">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-primary/60 group-hover:bg-primary rounded-md transition-all duration-300" style="height: 45%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">T</span>
+</div>
+<!-- Fri (Today) -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="380 kcal" data-day="Fri" data-time="45 min" data-title="Upper Body Hypertrophy">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1 relative">
+<div class="absolute -top-1 w-2 h-2 rounded-full bg-primary animate-ping"></div>
+<div class="w-full bg-primary rounded-md shadow-[0_0_16px_rgba(75,226,119,0.6)] transition-all duration-300" style="height: 70%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold">F</span>
+</div>
+<!-- Sat -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="Rest Plan" data-day="Sat" data-time="Scheduled" data-title="Active Recovery Yoga">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-surface-container-high rounded-md transition-all duration-300" style="height: 20%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">S</span>
+</div>
+<!-- Sun -->
+<div class="flex flex-col items-center gap-space-xs flex-1 group cursor-pointer" data-cal="Endurance Ride" data-day="Sun" data-time="Planned" data-title="Zone 3 Long Ride">
+<div class="w-full h-36 flex items-end justify-center rounded-lg bg-surface-container-low p-1">
+<div class="w-full bg-surface-container-high rounded-md transition-all duration-300" style="height: 15%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant group-hover:text-on-surface">S</span>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between transition-all duration-200" id="bar-detail-display">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-body-sm font-body-sm text-on-surface font-medium" id="bar-detail-title">Upper Body Hypertrophy (Today)</span>
+</div>
+<span class="text-mono-metric font-mono-metric text-primary" id="bar-detail-stat">45m • 380 kcal</span>
+</div>
+</div>
+</div>
+<!-- Visual Storytelling Ribbon: Athlete Form & Physiological State -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-2xl">
+<div class="relative overflow-hidden rounded-xl bg-surface-container h-44 group cursor-pointer">
+<div class="bg-cover bg-center w-full h-full scale-100 group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="Athletic male performing heavy barbell deadlifts in a high-end luxury dark-themed private gymnasium with emerald green LED architectural backlighting and dramatic cinematic shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVnCXtr770SwOsNYjm9IEaDR9ey6ctCm_SQJL7Uw6vegIM2U4Izd5AeNjCycZliBjm2sRa92XSZzofghNA3EA0cekanNBfJQNo9wKGpFZ_VEomzziio4F4vdD3SCUHGrs5lI57L-ss_FbknQkiZDxA5yLBqzkXmnKUXCZpj6yhO5KpxrGZ7IfNzrWKqsUmRDR5WnjfLG8mTn6YiETLoprysBkJWzgvKxFsR7rjwbce')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex justify-between items-end">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold">Max Strain Peak</span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Compound Strength</h4>
+</div>
+<span class="text-mono-metric font-mono-metric text-on-surface-variant bg-surface/70 px-space-sm py-space-xs rounded">98% Effort</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container h-44 group cursor-pointer">
+<div class="bg-cover bg-center w-full h-full scale-100 group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="Sprinter accelerating on a dark indoor high-tech track with cyan and green laser metric overlays across the running lane reflecting off dark rubber floor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAm9Q5wYgjjM_uSmfjyfnWjkjkv9UFivSIaL7dGwy9HNYWznepS-rRScGkccyFC51SP1GYKUkR7Uyh1o8qKF4hj2QuYQDt2YoFNuMAmXzdVTfiQO-xeZPbyZEdDlQfMUQf87Ul2-0KotQJbp8t-UT_E4gk-AfeXcC2gfYkjeLZuzt9FfQTD-6Zto69roXi81QJI3tQkQSpOClotUD5brW5vc49xIpTHawMFUpkDi5se')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex justify-between items-end">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase font-bold">Aerobic Power</span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Zone 4 Threshold</h4>
+</div>
+<span class="text-mono-metric font-mono-metric text-on-surface-variant bg-surface/70 px-space-sm py-space-xs rounded">174 bpm max</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container h-44 group cursor-pointer">
+<div class="bg-cover bg-center w-full h-full scale-100 group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="High performance endurance road cyclist riding at dawn through a misty pine forest road with morning sun rays penetrating mist and neon accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfp4Y1F3nuyrmQw24_RG30X83esqPch_mThlMD6eHvOaw1BugijED6E8O9yw7NDHcYKPqEKnSzxyaXljg-xMkdVB9lK9ZirmCc8fnT6UvoyehEO8aM-aGRiKebwAcBOI5O8ePQSArBb06rslpcnkO1Q3GTr4-RqQXapWOn4uVxvTwNXeBdGN2nlI7UP53ebcA7xVEI_4HPFQBWeZiLK4T3PN3yE1IvyQgjcqkK9DLJ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex justify-between items-end">
+<div>
+<span class="text-label-sm font-label-sm text-tertiary uppercase font-bold">Active Cadence</span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">Endurance Recovery</h4>
+</div>
+<span class="text-mono-metric font-mono-metric text-on-surface-variant bg-surface/70 px-space-sm py-space-xs rounded">242 W avg</span>
+</div>
+</div>
+</div>
+<!-- Workout Categories Grid -->
+<div class="flex flex-col gap-space-md mb-space-2xl">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest font-bold">Modality Breakdown</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Workout Categories</h3>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant hidden sm:inline">Active telemetry mapping across 5 biometric domains</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-space-md">
+<!-- Strength Training -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(34,197,94,0.22)] cursor-pointer">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">exercise</span>
+</div>
+<span class="text-label-sm font-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary font-mono">Top split</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Strength Training</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Upper & Lower splits</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">12 workouts</span>
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- HIIT & Cardio -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(76,215,246,0.22)] cursor-pointer">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<span class="text-label-sm font-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-low text-secondary font-mono">Anaerobic</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">HIIT & Cardio</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Zone 4/5 intervals</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">8 workouts</span>
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Cycling -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(209,189,255,0.22)] cursor-pointer">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">directions_bike</span>
+</div>
+<span class="text-label-sm font-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-low text-tertiary font-mono">Aerobic</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Cycling</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Cadence & Power</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">4 rides</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Yoga & Mobility -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(34,197,94,0.22)] cursor-pointer">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">self_improvement</span>
+</div>
+<span class="text-label-sm font-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary font-mono">Recovery</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">Yoga & Mobility</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Active recovery</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">6 sessions</span>
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Running & Track -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(76,215,246,0.22)] cursor-pointer">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">sprint</span>
+</div>
+<span class="text-label-sm font-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-low text-secondary font-mono">Pacing</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-secondary transition-colors">Running & Track</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Pace & VO2 Max</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">5 runs</span>
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Workout History Timeline & Logs -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest font-bold">Telemetry Record</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Workout History Timeline</h3>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Showing latest 3 recorded sessions</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm" id="workout-history-list">
+<!-- Row 1: Today -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-label-sm font-label-sm uppercase px-space-sm py-0.5 rounded bg-primary/10 text-primary font-bold">Today</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Upper Body Hypertrophy</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant">Strength</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">4 sets bench press (102.5kg), weighted pull-ups (+20kg), overhead DB press</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-xl">
+<div class="flex items-center gap-space-lg text-right">
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-on-surface font-semibold">45 min</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Duration</span>
+</div>
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-primary font-semibold">380 kcal</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Energy</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/20 transition-colors" onclick="this.closest('.group').remove()" title="Delete entry">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Yesterday -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">sprint</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-label-sm font-label-sm uppercase px-space-sm py-0.5 rounded bg-surface-container-low text-on-surface-variant font-bold">Yesterday</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Morning Zone 2 Tempo Run</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-secondary/10 text-secondary">Cardio</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">5.1 km outdoor asphalt • Avg HR 142 bpm • Cadence 176 spm • Elevation gain +42m</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-xl">
+<div class="flex items-center gap-space-lg text-right">
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-on-surface font-semibold">32 min</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Duration</span>
+</div>
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-secondary font-semibold">310 kcal</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Energy</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/20 transition-colors" onclick="this.closest('.group').remove()" title="Delete entry">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Row 3: 3 Days Ago -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">self_improvement</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-label-sm font-label-sm uppercase px-space-sm py-0.5 rounded bg-surface-container-low text-on-surface-variant font-bold">3 Days Ago</span>
+<span class="text-headline-sm font-headline-sm text-on-surface">Core & Mobility Flow</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-primary/10 text-primary">Yoga</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Thoracic spine decompression, deep psoas release, diaphragm breathing sequence</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-xl">
+<div class="flex items-center gap-space-lg text-right">
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-on-surface font-semibold">25 min</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Duration</span>
+</div>
+<div class="flex flex-col">
+<span class="text-mono-metric font-mono-metric text-primary font-semibold">140 kcal</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Energy</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/20 transition-colors" onclick="this.closest('.group').remove()" title="Delete entry">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Drawer / Modal Overlay for Log Workout -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden flex items-center justify-center p-space-md" id="log-workout-modal">
+<div class="relative w-full max-w-2xl bg-surface-container-high rounded-xl p-space-xl shadow-[0_24px_64px_-12px_rgba(0,0,0,0.85)] max-h-[92vh] overflow-y-auto">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">add_task</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Log Telemetric Session</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Synchronize directly to Vitalis AI Engine</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" id="close-log-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-lg" id="workout-form" onsubmit="event.preventDefault(); window.handleLogSubmit();">
+<!-- Workout Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="workout-name">Workout Name</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container focus:text-on-surface" id="workout-name" placeholder="e.g. Posterior Chain & Deadlifts" required="" type="text"/>
+</div>
+<!-- Modality Pills Selection -->
+<div class="flex flex-col gap-space-xs">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Modality Category</span>
+<div class="flex flex-wrap gap-space-xs" id="category-pills">
+<button class="category-pill active px-space-md py-space-xs rounded-full text-label-sm font-label-sm bg-primary text-on-primary transition-all" data-cat="Strength" type="button">Strength</button>
+<button class="category-pill px-space-md py-space-xs rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all" data-cat="HIIT" type="button">HIIT</button>
+<button class="category-pill px-space-md py-space-xs rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all" data-cat="Cardio" type="button">Cardio</button>
+<button class="category-pill px-space-md py-space-xs rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all" data-cat="Cycling" type="button">Cycling</button>
+<button class="category-pill px-space-md py-space-xs rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all" data-cat="Yoga" type="button">Yoga</button>
+</div>
+</div>
+<!-- Numerics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="workout-duration">Duration (mins)</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container" id="workout-duration" min="1" placeholder="45" required="" type="number"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="workout-calories">Calories (kcal)</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container" id="workout-calories" min="1" placeholder="380" required="" type="number"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="workout-distance">Distance (km)</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container" id="workout-distance" placeholder="0.0" step="0.1" type="number"/>
+</div>
+</div>
+<!-- Notes -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="workout-notes">Clinical / Bio Notes</label>
+<textarea class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container resize-none" id="workout-notes" placeholder="RPE 8.5 • No patellar pain reported • Peak heart rate 168 bpm" rows="3"></textarea>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-end gap-space-md pt-space-sm">
+<button class="px-space-lg py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-headline-sm text-headline-sm" id="cancel-log-btn" type="button">Discard</button>
+<button class="bg-primary text-on-primary px-space-xl py-space-sm rounded-xl font-headline-sm text-headline-sm flex items-center gap-space-sm shadow-[0_4px_20px_rgba(75,226,119,0.35)] hover:shadow-[0_6px_28px_rgba(75,226,119,0.5)] transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Record Session</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const modal = document.getElementById('log-workout-modal');
+    const openBtn = document.getElementById('open-log-modal-btn');
+    const closeBtn = document.getElementById('close-log-modal-btn');
+    const cancelBtn = document.getElementById('cancel-log-btn');
+    const pills = document.querySelectorAll('.category-pill');
+    let selectedCategory = 'Strength';
+
+    function openModal() {
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary', 'active');
+          p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary', 'active');
+        selectedCategory = pill.getAttribute('data-cat');
+      });
+    });
+
+    // Bar visualization interactive scrubber
+    const bars = document.querySelectorAll('#week-bars-container > div');
+    const detailTitle = document.getElementById('bar-detail-title');
+    const detailStat = document.getElementById('bar-detail-stat');
+
+    bars.forEach(bar => {
+      bar.addEventListener('mouseenter', () => {
+        const title = bar.getAttribute('data-title');
+        const time = bar.getAttribute('data-time');
+        const cal = bar.getAttribute('data-cal');
+        const day = bar.getAttribute('data-day');
+        if (title && detailTitle && detailStat) {
+          detailTitle.textContent = `${title} (${day})`;
+          detailStat.textContent = `${time} • ${cal}`;
+        }
+      });
+    });
+
+    // Workout submission handler with real backend API integration
+    window.handleLogSubmit = function() {
+      const nameInput = document.getElementById('workout-name');
+      const durInput = document.getElementById('workout-duration');
+      const calInput = document.getElementById('workout-calories');
+      const notesInput = document.getElementById('workout-notes');
+      const list = document.getElementById('workout-history-list');
+
+      if (!nameInput.value || !durInput.value) return;
+
+      const titleVal = nameInput.value;
+      const durVal = durInput.value;
+      const calVal = calInput.value || '320';
+      const notesVal = notesInput.value || 'Processed and synchronized with Vitalis.';
+
+      // POST to real backend
+      fetch('http://localhost:5000/api/workouts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: titleVal,
+          durationMinutes: parseInt(durVal, 10),
+          caloriesBurned: parseInt(calVal, 10),
+          category: selectedCategory,
+          notes: notesVal
+        })
+      })
+      .then(res => res.json())
+      .then(result => {
+        const workoutId = result.data?.id || `f_${Date.now()}`;
+        const newRow = document.createElement('div');
+        newRow.className = "relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-colors group animate-fadeIn";
+        newRow.setAttribute('data-id', workoutId);
+        newRow.innerHTML = `
+          <div class="flex items-start md:items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+              <span class="material-symbols-outlined text-[24px]">task_alt</span>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex flex-wrap items-center gap-space-xs">
+                <span class="text-label-sm font-label-sm uppercase px-space-sm py-0.5 rounded bg-primary/10 text-primary font-bold">Just Now</span>
+                <span class="text-headline-sm font-headline-sm text-on-surface">${titleVal}</span>
+                <span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant">${selectedCategory}</span>
+              </div>
+              <p class="text-body-sm font-body-sm text-on-surface-variant mt-1">${notesVal}</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between md:justify-end gap-space-xl">
+            <div class="flex items-center gap-space-lg text-right">
+              <div class="flex flex-col">
+                <span class="text-mono-metric font-mono-metric text-on-surface font-semibold">${durVal} min</span>
+                <span class="text-label-sm font-label-sm text-on-surface-variant">Duration</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-mono-metric font-mono-metric text-primary font-semibold">${calVal} kcal</span>
+                <span class="text-label-sm font-label-sm text-on-surface-variant">Energy</span>
+              </div>
+            </div>
+            <button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/20 transition-colors" title="Delete entry" onclick="deleteWorkoutEntry('${workoutId}', this)">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          </div>
+        `;
+
+        if (list) {
+          list.insertBefore(newRow, list.firstChild);
+        }
+      })
+      .catch(err => console.error('Failed to log workout to backend:', err));
+
+      // Reset & close
+      nameInput.value = '';
+      durInput.value = '';
+      calInput.value = '';
+      notesInput.value = '';
+      closeModal();
+    };
+
+    window.deleteWorkoutEntry = function(workoutId, btn) {
+      if (workoutId) {
+        fetch(`http://localhost:5000/api/workouts/${workoutId}`, { method: 'DELETE' }).catch(console.warn);
+      }
+      btn.closest('.group').remove();
+    };
+
+    // Load initial workouts from backend on page load
+    fetch('http://localhost:5000/api/workouts')
+      .then(res => res.json())
+      .then(res => {
+        if (res.success && res.data && res.data.workouts) {
+          console.log(`Loaded ${res.data.workouts.length} live workouts for Harshita`);
+        }
+      })
+      .catch(console.warn);
+  })();
+</script></main></div></body></html>
